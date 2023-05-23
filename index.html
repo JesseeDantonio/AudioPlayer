@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./dist/output.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+  <title>Lecteur Audio</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+</head>
+
+
+<body class="grid place-content-center">
+
+  <div class="bg-zinc-800 sm:rounded md:rounded lg:rounded-full md:w-[50rem] lg:w-[64rem]">
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-1">
+
+      <div class="text-center text-sm white-color col-span-full" id="information-player">
+        <span>00:00:00 / 00:00:00</span>
+      </div>
+      <div class="text-center white-color">
+        <label for="Previous"></label>
+        <button title="Previous" id="button_back"><i class="fa fa-fast-backward"></i></button>
+      </div>
+      <div class="text-center white-color">
+        <label for="play or pause"></label>
+        <button title="Play / Pause" id="button_play_pause"><i class="fa fa-play"></i></button>
+      </div>
+      <div class="text-center white-color">
+        <label for="stop"></label>
+        <button title="Stop" id="button_stop"><i class="fa fa-stop"></i></button>
+      </div>
+      <div class="text-center white-color">
+        <label for="next"></label>
+        <button title="Next" id="button_forward"><i class="fa fa-fast-forward"></i></button>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-1 lg:grid-cols-6 md:grid-cols-3 gap-2">
+
+      <div class="pt-1 text-center white-color sm:col-span-2 md:col-span-1">
+        <input class="w-20 purple-input" title="Volume" type="range" id="volume" min="0.00" max="1.00" step="0.05" value="0.50">
+      </div>
+      <div class="px-4 pt-1 md:col-span-2">
+        <label for="progression"></label>
+        <input class="w-full purple-input" title="Progress bar" type="range" id="seek" value="0" max="">
+      </div>
+      <div class="text-center white-color md:col-span-1 sm:col-span-2">
+        <button title="Mute / Unmute" id="button_mute"><i class="fa fa-volume-up"></i></button>
+      </div>
+      <div class="text-center white-color md:col-span-1 sm:col-span-2">
+        <button title="Random" id="button_random"><i id="icon-random" class='fas fa-random'></i></button>
+      </div>
+      <div class="text-center white-color md:col-span-1 sm:col-span-2">
+        <button title="Loop" id="button_loop"><i id="icon-loop" class='fa fa-refresh'></i></button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script type="module" src="./JS/index.js">
+
+
+  </script>
+
+</body>
+
+</html>
